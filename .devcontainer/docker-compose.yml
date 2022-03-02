@@ -9,8 +9,10 @@ services:
     container_name: 'my-node-17-alpine'
     expose:
       - '3000'
+      - '3001'
     ports:
       - '3000:3000'
+      - '3001:3001'
     stdin_open: true
     tty: true
     # nodeamonを有効化

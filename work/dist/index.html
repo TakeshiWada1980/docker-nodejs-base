@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Hello</title>
+</head>
+
+<script type="text/javascript">
+
+  const sock = new WebSocket('ws://localhost:3001');
+
+  sock.addEventListener('open', e => {
+    console.log('Socket 接続成功');
+  });
+
+  sock.addEventListener('message', e => {
+    console.log(`received : ${e.data}`);
+  });
+
+  document.addEventListener('DOMContentLoaded', e => {
+    document.getElementById('sample').addEventListener('click', e => {
+      console.log('send : Hello');
+      sock.send('hello');
+    });
+  });
+</script>
+</head>
+
+<body>
+  <h1>Hello WS</h1>
+  <input type="button" id="sample" value="送信">
+</body>
+
+</html>
