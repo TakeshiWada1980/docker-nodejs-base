@@ -1,0 +1,22 @@
+version: '3'
+
+volumes:
+  node_modules:
+
+services:
+  app:
+    build: .
+    container_name: 'my-node-17-alpine'
+    expose:
+      - '3000'
+    ports:
+      - '3000:3000'
+    stdin_open: true
+    tty: true
+    # nodeamonを有効化
+    environment:
+      - CHOKIDAR_USEPOLLING=true
+    working_dir: '/work'
+    volumes:
+      - ../work:/work
+      - node_modules:/work/node_modules

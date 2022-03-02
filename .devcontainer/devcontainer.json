@@ -1,0 +1,11 @@
+{
+  "name": "Node Websocket",
+  "dockerComposeFile": "docker-compose.yml",
+  "service": "app",
+  "workspaceFolder": "/work",
+  "extensions": [
+    "digitalbrainstem.javascript-ejs-support",
+    "dbaeumer.vscode-eslint",
+    "leizongmin.node-module-intellisense"
+  ],
+}

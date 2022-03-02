@@ -1,0 +1,15 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "デバッグ サーバ起動（自動再読込有効）",
+			"type": "shell",
+			"command": "npx nodemon --exec ts-node src/*.ts",
+		},
+		{
+			"label": "ビルド（distに出力）",
+			"type": "shell",
+			"command": "npx tsc",
+		}
+	]
+}

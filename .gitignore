@@ -1,0 +1,4 @@
+/.vscode/
+
+/work/dist/*.js
+/work/dist/*.map
